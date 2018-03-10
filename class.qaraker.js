@@ -1,45 +1,13 @@
-    class Qaraker {
-         constructor(x, y, ind) {
-             this.index = ind;
-             this.x = x;
-             this.y = y;
-             this.multiply = 0;
-             this.energy = 3;
+class Qaraker extends KendaniEak {
+    constructor(x, y, ind) {
+        super(x, y, ind);
 
-        }
-        newDirections() {
-	        this.directions = [
-	            [this.x - 1, this.y - 1],
-	            [this.x, this.y - 1],
-	            [this.x + 1, this.y - 1],
-	            [this.x - 1, this.y],
-	            [this.x + 1, this.y],
-	            [this.x - 1, this.y + 1],
-	            [this.x, this.y + 1],
-	            [this.x + 1, this.y + 1]
-	        ];
+        this.energy = 3;
+
     }
 
 
-    getDirections(t) {
-        this.newDirections();
-        var found = [];
-
-        for (var i in this.directions) {
-            var x = this.directions[i][0];
-            var y = this.directions[i][1];
-            if (x >= 0 && x < matrix[0].length && y >= 0 && y < matrix.length) {
-                if (matrix[y][x] == t) {
-                    found.push(this.directions[i]);
-                }
-            }
-        }
-        return found;
-    }
-     
-
-
-     move() {
+    move() {
         var emptyCord = this.getDirections(0);
         var cord = random(emptyCord);
 
@@ -92,11 +60,11 @@
             this.energy--;
             if (this.energy < 3) {
                 this.die();
-             
+
             }
         }
     }
-      mul() {
+    mul() {
         var emptyCord = this.getDirections(0);
 
         var cord = random(emptyCord);
@@ -104,16 +72,16 @@
             var x = cord[0];
             var y = cord[1];
 
-            
+
 
             var norQaraker = new Qaraker(x, y, this.index);
             qarkerArr.push(norQaraker);
 
             matrix[y][x] = 5;
-            
+
         }
     }
-        die() {
+    die() {
         matrix[this.y][this.x] = 0;
         for (var i in qarkerArr) {
             if (this.x == qarkerArr[i].x && this.y == qarkerArr[i].y) {
@@ -122,4 +90,4 @@
         }
     }
 
-    }
+}

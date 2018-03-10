@@ -1,44 +1,14 @@
-class Amenaker {
+class Amenaker extends KendaniEak {
     constructor(x, y, ind) {
-        this.index = ind;
-        this.x = x;
-        this.y = y;
-        this.multiply = 0;
+        super(x, y, ind);
+
         this.energy = 20;
 
     }
 
-        newDirections() {
-        this.directions = [
-            [this.x - 1, this.y - 1],
-            [this.x, this.y - 1],
-            [this.x + 1, this.y - 1],
-            [this.x - 1, this.y],
-            [this.x + 1, this.y],
-            [this.x - 1, this.y + 1],
-            [this.x, this.y + 1],
-            [this.x + 1, this.y + 1]
-        ];
-    }
 
 
-    getDirections(t) {
-        this.newDirections();
-        var found = [];
-
-        for (var i in this.directions) {
-            var x = this.directions[i][0];
-            var y = this.directions[i][1];
-            if (x >= 0 && x < matrix[0].length && y >= 0 && y < matrix.length) {
-                if (matrix[y][x] == t) {
-                    found.pushs;
-                }
-            }
-        }
-        return found;
-    }
-
-        move() {
+    move() {
         var emptyCord = this.getDirections(0);
         var cord = random(emptyCord);
 
@@ -49,22 +19,22 @@ class Amenaker {
             matrix[y][x] = 6;
 
             matrix[this.y][this.x] = 0;
-s
+            
             this.x = x;
             this.y = y;
 
         }
     }
-        eat() {
+    eat() {
 
         var emptyCord1 = this.getDirections(3);
         var emptyCord2 = this.getDirections(5);
 
-        
+
         var cord1 = random(emptyCord1);
         var cord2 = random(emptyCord2);
-        
-      
+
+
 
         if (cord1) {
             this.multiply++;
@@ -124,17 +94,17 @@ s
                 this.mul()
                 this.multiply = 0;
             }
-        }  
+        }
         else {
             this.move();
             this.energy--;
             if (this.energy < 15) {
                 this.die();
-                
+
             }
         }
     }
-                mul() {
+    mul() {
         var emptyCord = this.getDirections(0);
 
         var cord = random(emptyCord);
@@ -151,7 +121,7 @@ s
             this.multiply = 0;
         }
     }
-            die() {
+    die() {
         matrix[this.y][this.x] = 0;
         for (var i in amenkerArr) {
             if (this.x == amenkerArr[i].x && this.y == amenkerArr[i].y) {
