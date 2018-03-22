@@ -48,6 +48,7 @@ class Qaraker extends KendaniEak {
             for (var i in qarArr) {
                 if (x == qarArr[i].x && y == qarArr[i].y) {
                     qarArr.splice(i, 1);
+                    break;
                 }
             }
             if (this.multiply == 10) {
@@ -86,6 +87,7 @@ class Qaraker extends KendaniEak {
         for (var i in qarkerArr) {
             if (this.x == qarkerArr[i].x && this.y == qarkerArr[i].y) {
                 qarkerArr.splice(i, 1);
+                break;
             }
         }
     }
