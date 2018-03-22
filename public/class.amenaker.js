@@ -53,11 +53,13 @@ class Amenaker extends KendaniEak {
             for (var i in gishArr) {
                 if (x == gishArr[i].x && y == gishArr[i].y) {
                     gishArr.splice(i, 1);
+                    break;
                 }
             }
             for (var i in qarkerArr) {
                 if (x == qarkerArr[i].x && y == qarkerArr[i].y) {
                     qarkerArr.splice(i, 1);
+                    break;
                 }
             }
             if (this.multiply == 4) {
@@ -83,11 +85,13 @@ class Amenaker extends KendaniEak {
             for (var i in gishArr) {
                 if (x == gishArr[i].x && y == gishArr[i].y) {
                     gishArr.splice(i, 1);
+                    break;
                 }
             }
             for (var i in qarkerArr) {
                 if (x == qarkerArr[i].x && y == qarkerArr[i].y) {
                     qarkerArr.splice(i, 1);
+                    break;
                 }
             }
             if (this.multiply == 4) {
@@ -126,6 +130,7 @@ class Amenaker extends KendaniEak {
         for (var i in amenkerArr) {
             if (this.x == amenkerArr[i].x && this.y == amenkerArr[i].y) {
                 amenkerArr.splice(i, 1);
+                break;
             }
         }
     }
