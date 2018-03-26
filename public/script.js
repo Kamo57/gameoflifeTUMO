@@ -3,18 +3,18 @@ var side = 2;
 var xotArr = [];
 var xotCount = 60;
 var eatArr = [];
-var eatCount = 55;
+var eatCount = 70;
 var gishArr = [];
-var gishCount = 45;
+var gishCount = 60;
 var qarArr = [];
-var qarCount = 57;
+var qarCount = 70;
 var qarkerArr = [];
 var qarkerCount = 60;
 var amenkerArr = [];
 var amenkerCount = 20;
 var matrix = [];
 var erk = 60;
-var bar = 60;
+var bar = 80;
 
 for (var i = 0; i < erk; i++) {
     matrix.push([]);
@@ -229,6 +229,7 @@ function draw() {
             }
         }
     }
+    exanak();
 }
 
 
