@@ -1,20 +1,20 @@
 var matrix = []
 var side = 2;
 var xotArr = [];
-var xotCount = 5000;
+var xotCount = 60;
 var eatArr = [];
-var eatCount = 3000;
+var eatCount = 55;
 var gishArr = [];
-var gishCount = 1500;
+var gishCount = 45;
 var qarArr = [];
-var qarCount = 4000;
+var qarCount = 150;
 var qarkerArr = [];
-var qarkerCount = 2000;
+var qarkerCount = 60;
 var amenkerArr = [];
-var amenkerCount = 1000;
+var amenkerCount = 20;
 var matrix = [];
-var erk = 150;
-var bar = 200;
+var erk = 60;
+var bar = 60;
 
 for (var i = 0; i < erk; i++) {
     matrix.push([]);
