@@ -7,7 +7,7 @@ var eatCount = 55;
 var gishArr = [];
 var gishCount = 45;
 var qarArr = [];
-var qarCount = 150;
+var qarCount = 57;
 var qarkerArr = [];
 var qarkerCount = 60;
 var amenkerArr = [];
@@ -69,38 +69,6 @@ function setup() {
 
 function draw() {
     background('#acacac');
-    for (var i = 0; i < matrix.length; i++) {
-        for (var j = 0; j < matrix[i].length; j++) {
-            if (matrix[i][j] == 1) {
-                fill("green");
-                rect(j * side, i * side, side, side);
-            } else if (matrix[i][j] == 2) {
-                fill("orange");
-                rect(j * side, i * side, side, side);
-            }
-            else if (matrix[i][j] == 3) {
-                fill("red");
-                rect(j * side, i * side, side, side);
-            }
-            else if (matrix[i][j] == 4) {
-                fill("DIMGRAY");
-                rect(j * side, i * side, side, side);
-            }
-            else if (matrix[i][j] == 5) {
-                fill("DARKSLATEGRAY");
-                rect(j * side, i * side, side, side);
-            }
-            else if (matrix[i][j] == 6) {
-                fill("#690505");
-                rect(j * side, i * side, side, side);
-            }
-            else if (matrix[i][j] == 0) {
-                fill('#acacac');
-                rect(j * side, i * side, side, side);
-            }
-        }
-    }
-
 
     for (var i in xotArr) {
         xotArr[i].mul();
@@ -119,7 +87,150 @@ function draw() {
     for (var i in amenkerArr) {
         amenkerArr[i].eat();
     }
+    function exanak() {
+        if (frameCount % 40 >= 0 && frameCount % 40 < 10) {
+            console.log("garun")
+
+            for (var i = 0; i < matrix.length; i++) {
+                for (var j = 0; j < matrix[i].length; j++) {
+                    if (matrix[i][j] == 1) {
+                        fill("green");
+                        rect(j * side, i * side, side, side);
+                    } else if (matrix[i][j] == 2) {
+                        fill("orange");
+                        rect(j * side, i * side, side, side);
+                    }
+                    else if (matrix[i][j] == 3) {
+                        fill("red");
+                        rect(j * side, i * side, side, side);
+                    }
+                    else if (matrix[i][j] == 4) {
+                        fill("DIMGRAY");
+                        rect(j * side, i * side, side, side);
+                    }
+                    else if (matrix[i][j] == 5) {
+                        fill("DARKSLATEGRAY");
+                        rect(j * side, i * side, side, side);
+                    }
+                    else if (matrix[i][j] == 6) {
+                        fill("#690505");
+                        rect(j * side, i * side, side, side);
+                    }
+                    else if (matrix[i][j] == 0) {
+                        fill('#acacac');
+                        rect(j * side, i * side, side, side);
+                    }
+                }
+            }
+        }
+        else if (frameCount % 40 >= 10 && frameCount % 40 < 20) {
+            console.log("amar")
+
+            for (var i = 0; i < matrix.length; i++) {
+                for (var j = 0; j < matrix[i].length; j++) {
+                    if (matrix[i][j] == 1) {
+                        fill("Chartreuse");
+                        rect(j * side, i * side, side, side);
+                    } else if (matrix[i][j] == 2) {
+                        fill("orange");
+                        rect(j * side, i * side, side, side);
+                    }
+                    else if (matrix[i][j] == 3) {
+                        fill("red");
+                        rect(j * side, i * side, side, side);
+                    }
+                    else if (matrix[i][j] == 4) {
+                        fill("DIMGRAY");
+                        rect(j * side, i * side, side, side);
+                    }
+                    else if (matrix[i][j] == 5) {
+                        fill("DARKSLATEGRAY");
+                        rect(j * side, i * side, side, side);
+                    }
+                    else if (matrix[i][j] == 6) {
+                        fill("#690505");
+                        rect(j * side, i * side, side, side);
+                    }
+                    else if (matrix[i][j] == 0) {
+                        fill('#acacac');
+                        rect(j * side, i * side, side, side);
+                    }
+                }
+            }
+        }
+        else if (frameCount % 40 >= 20 && frameCount % 40 < 30) {
+            console.log("ashun")
+
+            for (var i = 0; i < matrix.length; i++) {
+                for (var j = 0; j < matrix[i].length; j++) {
+                    if (matrix[i][j] == 1) {
+                        fill("DarkGoldenRod");
+                        rect(j * side, i * side, side, side);
+                    } else if (matrix[i][j] == 2) {
+                        fill("orange");
+                        rect(j * side, i * side, side, side);
+                    }
+                    else if (matrix[i][j] == 3) {
+                        fill("red");
+                        rect(j * side, i * side, side, side);
+                    }
+                    else if (matrix[i][j] == 4) {
+                        fill("DIMGRAY");
+                        rect(j * side, i * side, side, side);
+                    }
+                    else if (matrix[i][j] == 5) {
+                        fill("DARKSLATEGRAY");
+                        rect(j * side, i * side, side, side);
+                    }
+                    else if (matrix[i][j] == 6) {
+                        fill("#690505");
+                        rect(j * side, i * side, side, side);
+                    }
+                    else if (matrix[i][j] == 0) {
+                        fill('#acacac');
+                        rect(j * side, i * side, side, side);
+                    }
+                }
+            }
+        }
+        else if (frameCount % 40 >= 30 && frameCount % 40 < 39) {
+            console.log("dzmer")
+
+            for (var i = 0; i < matrix.length; i++) {
+                for (var j = 0; j < matrix[i].length; j++) {
+                    if (matrix[i][j] == 1) {
+                        fill("white");
+                        rect(j * side, i * side, side, side);
+                    } else if (matrix[i][j] == 2) {
+                        fill("orange");
+                        rect(j * side, i * side, side, side);
+                    }
+                    else if (matrix[i][j] == 3) {
+                        fill("red");
+                        rect(j * side, i * side, side, side);
+                    }
+                    else if (matrix[i][j] == 4) {
+                        fill("DIMGRAY");
+                        rect(j * side, i * side, side, side);
+                    }
+                    else if (matrix[i][j] == 5) {
+                        fill("DARKSLATEGRAY");
+                        rect(j * side, i * side, side, side);
+                    }
+                    else if (matrix[i][j] == 6) {
+                        fill("#690505");
+                        rect(j * side, i * side, side, side);
+                    }
+                    else if (matrix[i][j] == 0) {
+                        fill('#acacac');
+                        rect(j * side, i * side, side, side);
+                    }
+                }
+            }
+        }
+    }
 }
+
 
 
 
