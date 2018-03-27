@@ -1,20 +1,21 @@
 var matrix = []
 var side = 2;
 var xotArr = [];
-var xotCount = 60;
+var xotCount = 100;
 var eatArr = [];
-var eatCount = 70;
+var eatCount = 80;
 var gishArr = [];
-var gishCount = 60;
+var gishCount = 70;
 var qarArr = [];
-var qarCount = 70;
+var qarCount = 250;
 var qarkerArr = [];
-var qarkerCount = 60;
+var qarkerCount = 100;
 var amenkerArr = [];
-var amenkerCount = 20;
+var amenkerCount = 60;
 var matrix = [];
-var erk = 60;
-var bar = 80;
+var erk = 100;
+var bar = 100;
+p = document.getElementById("exk");
 
 for (var i = 0; i < erk; i++) {
     matrix.push([]);
@@ -64,7 +65,7 @@ function setup() {
             }
         }
     }
-
+p = document.getElementById("exk");
 }
 
 function draw() {
@@ -90,7 +91,6 @@ function draw() {
     function exanak() {
         if (frameCount % 40 >= 0 && frameCount % 40 < 10) {
             console.log("garun")
-
             for (var i = 0; i < matrix.length; i++) {
                 for (var j = 0; j < matrix[i].length; j++) {
                     if (matrix[i][j] == 1) {
@@ -120,12 +120,14 @@ function draw() {
                         fill('#acacac');
                         rect(j * side, i * side, side, side);
                     }
+
                 }
             }
+            p.innerHTML = "Spring";
         }
         else if (frameCount % 40 >= 10 && frameCount % 40 < 20) {
             console.log("amar")
-
+            p.innerHTML = "Summer";
             for (var i = 0; i < matrix.length; i++) {
                 for (var j = 0; j < matrix[i].length; j++) {
                     if (matrix[i][j] == 1) {
@@ -160,7 +162,7 @@ function draw() {
         }
         else if (frameCount % 40 >= 20 && frameCount % 40 < 30) {
             console.log("ashun")
-
+            p.innerHTML = "Fall";
             for (var i = 0; i < matrix.length; i++) {
                 for (var j = 0; j < matrix[i].length; j++) {
                     if (matrix[i][j] == 1) {
@@ -195,7 +197,7 @@ function draw() {
         }
         else if (frameCount % 40 >= 30 && frameCount % 40 < 39) {
             console.log("dzmer")
-
+            p.innerHTML = "Winter";
             for (var i = 0; i < matrix.length; i++) {
                 for (var j = 0; j < matrix[i].length; j++) {
                     if (matrix[i][j] == 1) {
@@ -231,6 +233,10 @@ function draw() {
     }
     exanak();
 }
+
+
+//var p = document.getElementById("spr");
+//p.addEventListener("click", exanak);
 
 
 
