@@ -59,7 +59,11 @@ class Eatgrass extends KendaniEak {
                 this.multiply = 0;
             }
 
-        } else {
+        }
+        else if (frameCount % 40 >= 30 && frameCount % 40 < 40) {
+            
+        }
+         else {
             this.move();
             this.energy--;
             if (this.energy < 3) {

@@ -196,7 +196,7 @@ function draw() {
                 }
             }
         }
-        else if (frameCount % 40 >= 30 && frameCount % 40 < 39) {
+        else if (frameCount % 40 >= 30 && frameCount % 40 < 40) {
             console.log("dzmer")
             p.innerHTML = "Winter";
             for (var i = 0; i < matrix.length; i++) {
