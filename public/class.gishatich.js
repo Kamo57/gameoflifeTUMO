@@ -25,7 +25,7 @@ class Gishatich extends KendaniEak {
 
         }
         else if (frameCount % 40 >= 30 && frameCount % 40 < 40) {
-        
+
         }
     }
 

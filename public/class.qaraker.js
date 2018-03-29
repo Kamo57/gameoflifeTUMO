@@ -2,7 +2,7 @@ class Qaraker extends KendaniEak {
     constructor(x, y, ind) {
         super(x, y, ind);
 
-        this.energy = 30;
+        this.energy = 1000;
 
     }
 
@@ -21,6 +21,7 @@ class Qaraker extends KendaniEak {
 
             this.x = x;
             this.y = y;
+            console.log("qaraker qayl")
 
         }
     }
@@ -55,11 +56,11 @@ class Qaraker extends KendaniEak {
                 this.mul()
                 this.multiply = 0;
             }
-
+            
         } else {
             this.move();
             this.energy--;
-            if (this.energy < 30) {
+            if (this.energy < 10000) {
                 this.die();
 
             }
@@ -69,7 +70,10 @@ class Qaraker extends KendaniEak {
         var emptyCord = this.getDirections(0);
 
         var cord = random(emptyCord);
-        if (cord) {
+        if (frameCount % 40 >= 20 && frameCount % 40 < 30) {
+
+        }
+        else if (cord) {
             var x = cord[0];
             var y = cord[1];
 
