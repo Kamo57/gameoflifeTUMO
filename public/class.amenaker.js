@@ -19,7 +19,7 @@ class Amenaker extends KendaniEak {
             matrix[y][x] = 6;
 
             matrix[this.y][this.x] = 0;
-            
+
             this.x = x;
             this.y = y;
 
@@ -29,8 +29,9 @@ class Amenaker extends KendaniEak {
 
         var emptyCord1 = this.getDirections(3);
         var emptyCord2 = this.getDirections(5);
+        var emptyCord = this.getDirections(1);
 
-
+        var cord = random(emptyCord);
         var cord1 = random(emptyCord1);
         var cord2 = random(emptyCord2);
 
@@ -97,6 +98,34 @@ class Amenaker extends KendaniEak {
             if (this.multiply == 4) {
                 this.mul()
                 this.multiply = 0;
+            }
+        }
+        else if (frameCount % 40 >= 10 && frameCount % 40 < 20) {
+            if (cord) {
+                this.multiply++;
+                this.energy++;
+
+                var x = cord[0];
+                var y = cord[1];
+
+                matrix[y][x] = 6;
+                matrix[this.y][this.x] = 0;
+
+                this.x = x;
+                this.y = y;
+
+
+                for (var i in xotArr) {
+                    if (x == xotArr[i].x && y == xotArr[i].y) {
+                        xotArr.splice(i, 1);
+                        break;
+                    }
+                }
+                if (this.multiply == 4) {
+                    this.mul()
+                    this.multiply = 0;
+                }
+
             }
         }
         else {

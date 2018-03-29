@@ -2,7 +2,7 @@ class Qaraker extends KendaniEak {
     constructor(x, y, ind) {
         super(x, y, ind);
 
-        this.energy = 3;
+        this.energy = 30;
 
     }
 
@@ -59,7 +59,7 @@ class Qaraker extends KendaniEak {
         } else {
             this.move();
             this.energy--;
-            if (this.energy < 3) {
+            if (this.energy < 30) {
                 this.die();
 
             }
