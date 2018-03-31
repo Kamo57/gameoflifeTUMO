@@ -1,4 +1,4 @@
-var socket = io.connect('http://localhost:4444');
+var socket = io.connect('http://localhost:3000');
 var statistics = {
     "timestamp": "",
     "clicks": 0,

@@ -1,3 +1,4 @@
+var socket = io.connect('http://localhost:3000');
 var matrix = []
 var side = 2;
 var xotArr = [];
@@ -31,6 +32,16 @@ fillMatrixByCreatures(qarCount, 4)
 fillMatrixByCreatures(qarkerCount, 5)
 fillMatrixByCreatures(amenkerCount, 6)
 
+
+var stats = {
+        "timestamp": "",
+        "Grass_count": 0,
+        "Eatgrass_count": 0,
+        "Bear_count": 0,
+        "Stone_count": 0,
+        "Eatstone_count": 0,
+        "Omnipotent_count":0
+    };
 
 function setup() {
     noStroke()
@@ -74,20 +85,25 @@ function draw() {
 
     for (var i in xotArr) {
         xotArr[i].mul();
+        stats.Grass_count++;
     }
 
     for (var i in eatArr) {
         eatArr[i].eat();
+        stats.Eatgrass_count++;
     }
     for (var i in gishArr) {
         gishArr[i].eat();
+        stats.Bear_count++;
     }
 
     for (var i in qarkerArr) {
         qarkerArr[i].eat();
+        stats.Eatstone_count++;
     }
     for (var i in amenkerArr) {
         amenkerArr[i].eat();
+        stats.Omnipotent_count++;
     }
     function exanak() {
         if (frameCount % 40 >= 0 && frameCount % 40 < 10) {
