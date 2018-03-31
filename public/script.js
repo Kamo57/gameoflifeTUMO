@@ -16,7 +16,7 @@ var matrix = [];
 var erk = 100;
 var bar = 100;
 p = document.getElementById("exk");
-//var exanak = p 
+//var exanak = p
 
 for (var i = 0; i < erk; i++) {
     matrix.push([]);
