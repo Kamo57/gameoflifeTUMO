@@ -34,38 +34,8 @@ class Eatgrass extends KendaniEak {
         var emptyCord0 = this.getDirections(0);
 
         var cord = random(emptyCord);
-         if (frameCount % 40 >= 30 && frameCount % 40 < 40) {
-            if (cord) {
-                var x = cord[0];
-                var y = cord[1];
-
-                matrix[y][x] = 2;
-                matrix[this.y][this.x] = 0;
-
-                this.x = x;
-                this.y = y;
-
-
-                /*                for (var i in xotArr) {
-                                    if (x == xotArr[i].x && y == xotArr[i].y) {
-                                        xotArr.splice(i, 1);
-                                        break;
-                                    }
-                                }
-                                if (this.multiply == 10) {
-                                    this.mul()
-                                    this.multiply = 0;
-                                }*/
-
-            }
-            else {
-                this.move();
-                this.energy += 0;
-                if (this.energy < 3) {
-                    this.die();
-                    //this.energy = 10;
-                }
-            }
+        if (frameCount % 40 >= 30 && frameCount % 40 < 40) {
+            delete this.eat
         }
         else if (cord) {
             this.multiply++;

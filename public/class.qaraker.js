@@ -85,6 +85,9 @@ class Qaraker extends KendaniEak {
             matrix[y][x] = 5;
 
         }
+        else if (frameCount % 40 >= 20 && frameCount % 40 < 30) {
+            
+        }
     }
     die() {
         matrix[this.y][this.x] = 0;

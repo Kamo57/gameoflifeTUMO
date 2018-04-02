@@ -2,7 +2,7 @@ class Gishatich extends KendaniEak {
     constructor(x, y, ind) {
         super(x, y, ind);
 
-        this.energy = 15;
+        this.energy = 150;
 
     }
 
@@ -25,7 +25,7 @@ class Gishatich extends KendaniEak {
 
         }
         else if (frameCount % 40 >= 30 && frameCount % 40 < 40) {
-
+              
         }
     }
 
